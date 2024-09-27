@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinarians - Pet Dog Wellness & Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #DBF0E4;
+            color: #2C6E49;
+        }
+        .navbar {
+            background-color: #66B2A5 !important;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+        }
+        .btn-primary {
+            background-color: #66B2A5;
+            border-color: #66B2A5;
+        }
+        .btn-primary:hover {
+            background-color: #4D8A7B;
+            border-color: #4D8A7B;
+        }
+        .btn-secondary {
+            background-color: #63CB8C;
+            border-color: #63CB8C;
+        }
+        .btn-secondary:hover {
+            background-color: #4BA96D;
+            border-color: #4BA96D;
+        }
+        .vet-card {
+            background-color: #DBF0E4;
+            border: 2px solid #66B2A5;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .vet-card:hover {
+            box-shadow: 0 5px 15px rgba(44, 110, 73, 0.2);
+            transform: translateY(-5px);
+        }
+        .vet-image {
+            width: 100%;
+            height: 525px;
+            object-fit: cover;
+        }
+        .vet-info {
+            padding: 20px;
+        }
+        .vet-quote {
+            font-style: italic;
+            border-left: 4px solid #63CB8C;
+            padding-left: 10px;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #66B2A5;
+            color: #ffffff;
+        }
+        .contact-btn {
+            background-color: #63CB8C;
+            color: #2C6E49;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .contact-btn:hover {
+            background-color: #4BA96D;
+        }
+        .social-icon {
+            color: #2C6E49;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .social-icon:hover, .mail:hover {
+            color: #ffffff;
+        }
+        #blogs_text:hover {
+            color: #ffffff;
+        }
+        #blogs_text{
+            text-decoration: wavy; color:#2C6E49 ;
+            font-weight: 600;
+        }
+        .mail{
+            text-decoration: wavy; color:#2C6E49 ;
+            font-weight: 600;
+        }
+        /* No hover effect on email in the modal */
+        .modal .mail:hover {
+            color: inherit; /* Keep the original text color */
+            text-decoration: none; /* No underline on hover */
+        }
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid white;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        .profile-popup {
+            display: none;
+            position: fixed; /* Centering */
+            left: 50%; /* Centering */
+            top: 50%; /* Centering */
+            transform: translate(-50%, -50%); /* Centering */
+            background-color: #ffffff; /* White background for contrast */
+            border: 1px solid #2C6E49;
+            border-radius: 15px; /* Rounded corners */
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px; /* Fixed width for consistency */
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .profile-container {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <img src="Pawsitive-removebg-preview.png" alt="Logo" width="70px" height="70px" style="color: white;" class="img-fluid rounded">
+            <a class="navbar-brand" href="./index.html"> Pet Dog Wellness & Care</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Veterinarians.html">Veterinarians</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/tools.html">Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./blog.html">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Dog_care.html">Dog Care</a></li>
+                    <li class="nav-item profile-container">
+                        <img src="./profile.jpg" alt="Profile" class="profile-pic" id="profilePic">
+                        <div class="profile-popup" id="profilePopup">
+                            <h5>Pet Profile</h5>
+                            <div id="petInfo"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">Our Experienced Veterinarians</h1>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="vet-card">
+                    <img src="Dr. Emily Johnson.jpg" alt="Dr. Emily Johnson" class="vet-image">
+                    <div class="vet-info">
+                        <h3>Dr. Emily Johnson</h3>
+                        <p><strong>Specialty:</strong> Canine Internal Medicine</p>
+                        <p><strong>Qualifications:</strong> DVM, DACVIM</p>
+                        <p><strong>Address:</strong> 123 Dogwood Lane, Pawsville, CA 90210</p>
+                        <p><strong>Contact:</strong> (555) 123-4567</p>
+                        <p class="vet-quote">"Preventive care is the key to a long and healthy life for your furry friend."</p>
+                        <button class="contact-btn mt-3" data-bs-toggle="modal" data-bs-target="#vetModal" data-name="Dr. Emily Johnson" data-contact="(555) 123-4567" data-email="emily.johnson@vetclinic.com">Contact Dr. Johnson</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="vet-card">
+                    <img src="Dr. Michael Smith.jpeg" alt="Dr. Michael Smith" class="vet-image">
+                    <div class="vet-info">
+                        <h3>Dr. Michael Smith</h3>
+                        <p><strong>Specialty:</strong> Veterinary Surgery</p>
+                        <p><strong>Qualifications:</strong> DVM, DACVS</p>
+                        <p><strong>Address:</strong> 456 Bark Ave, Woof City, CA 90211</p>
+                        <p><strong>Contact:</strong> (555) 987-6543</p>
+                        <p class="vet-quote">"Surgery is a journey; let's make it a safe one for your pet."</p>
+                        <button class="contact-btn mt-3" data-bs-toggle="modal" data-bs-target="#vetModal" data-name="Dr. Michael Smith" data-contact="(555) 987-6543" data-email="michael.smith@vetclinic.com">Contact Dr. Smith</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="vet-card">
+                    <img src="Dr. Sarah Brown.jpg" alt="Dr. Sarah Brown" class="vet-image">
+                    <div class="vet-info">
+                        <h3>Dr. Sarah Brown</h3>
+                        <p><strong>Specialty:</strong> Dermatology</p>
+                        <p><strong>Qualifications:</strong> DVM, DACVD</p>
+                        <p><strong>Address:</strong> 789 Pet Lane, Puppy Town, CA 90212</p>
+                        <p><strong>Contact:</strong> (555) 246-8100</p>
+                        <p class="vet-quote">"Healthy skin leads to a happy dog."</p>
+                        <button class="contact-btn mt-3" data-bs-toggle="modal" data-bs-target="#vetModal" data-name="Dr. Sarah Brown" data-contact="(555) 246-8100" data-email="sarah.brown@vetclinic.com">Contact Dr. Brown</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="vet-card">
+                    <img src="Dr. David Wilson.jpeg" alt="Dr. David Wilson" class="vet-image">
+                    <div class="vet-info">
+                        <h3>Dr. David Wilson</h3>
+                        <p><strong>Specialty:</strong> Canine Cardiology</p>
+                        <p><strong>Qualifications:</strong> DVM, DACVIM</p>
+                        <p><strong>Address:</strong> 321 Canine Blvd, Fido City, CA 90213</p>
+                        <p><strong>Contact:</strong> (555) 654-3210</p>
+                        <p class="vet-quote">"Heart health is crucial for your dog's overall well-being."</p>
+                        <button class="contact-btn mt-3" data-bs-toggle="modal" data-bs-target="#vetModal" data-name="Dr. David Wilson" data-contact="(555) 654-3210" data-email="david.wilson@vetclinic.com">Contact Dr. Wilson</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="vet-card">
+                    <img src="Dr. Anna Lee.jpeg" alt="Dr. Anna Lee" class="vet-image">
+                    <div class="vet-info">
+                        <h3>Dr. Anna Lee</h3>
+                        <p><strong>Specialty:</strong> Behavior & Training</p>
+                        <p><strong>Qualifications:</strong> DVM, CPDT-KA</p>
+                        <p><strong>Address:</strong> 654 Bark Street, Pup City, CA 90214</p>
+                        <p><strong>Contact:</strong> (555) 321-4567</p>
+                        <p class="vet-quote">"Understanding your dog's behavior is key to a harmonious life."</p>
+                        <button class="contact-btn mt-3" data-bs-toggle="modal" data-bs-target="#vetModal" data-name="Dr. Anna Lee" data-contact="(555) 321-4567" data-email="anna.lee@vetclinic.com">Contact Dr. Lee</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="vet-card">
+                    <img src="Dr. Hillary San.jpeg" alt="Dr. Anna Lee" class="vet-image">
+                    <div class="vet-info">
+                        <h3>Dr. Hillary San</h3>
+                        <p><strong>Specialty:</strong> Dog oncologist</p>
+                        <p><strong>Qualifications:</strong> DVM, CPDT-KA</p>
+                        <p><strong>Address:</strong> 69 halaro Street, Puty, LA 30514</p>
+                        <p><strong>Contact:</strong> (555) 546-4567</p>
+                        <p class="vet-quote">"Understanding your dog's behavior is key to a harmonious life."</p>
+                        <button class="contact-btn mt-3" data-bs-toggle="modal" data-bs-target="#vetModal" data-name="Dr. Anna Lee" data-contact="(555) 321-4567" data-email="anna.lee@vetclinic.com">Contact Dr. San</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="vetModal" tabindex="-1" aria-labelledby="vetModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="vetModalLabel">Contact Veterinarian</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalContent">You can reach out to <span id="vetName"></span> at:</p>
+                    <p><strong>Contact Number:</strong> <span id="vetContact"></span></p>
+                    <p><strong>Email:</strong> <span class="mail" id="vetEmail"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer class="mt-4 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>We are dedicated to providing the best care for your furry friends. Our team of experienced veterinarians and staff are committed to your pet's health and well-being.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Latest Blog Posts</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark" id="blogs_text">10 Tips for a Healthy Dog</a></li>
+                        <li><a href="#" class="text-dark" id="blogs_text">Understanding Your Dog's Behavior</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email:  <a class="mail" href="pawsitivecare069@gmail.com">pawsitivecare069@gmail.com</a> </p>
+                    <p>Phone: (123) 456-7890</p>
+                    <div>
+                        <a href="https://www.facebook.com/profile.php?id=61565951776773" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/PawsitiveC069" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/pawsitivecare_069/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $('#vetModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var vetName = button.data('name');
+            var vetContact = button.data('contact');
+            var vetEmail = button.data('email');
+
+            var modal = $(this);
+            modal.find('#vetName').text(vetName);
+            modal.find('#vetContact').text(vetContact);
+            modal.find('#vetEmail').text(vetEmail);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const profilePic = document.getElementById('profilePic');
+            const profilePopup = document.getElementById('profilePopup');
+            const petInfo = document.getElementById('petInfo');
+        
+            // Fetch pets data from JSON file
+            fetch('pets.json')
+                .then(response => response.json())
+                .then(data => {
+                    const pet = data.pet; // Access the pet object directly
+        
+                    profilePic.addEventListener('click', function(event) {
+                        event.stopPropagation(); // Prevents event bubbling
+        
+                        // Display pet information
+                        petInfo.innerHTML = `
+                            <p><strong>Pet ID:</strong> ${pet.pet_id}</p>
+                            <p><strong>Name:</strong> ${pet.pet_name}</p>
+                            <p><strong>Age:</strong> ${pet.age}</p>
+                            <p><strong>Breed:</strong> ${pet.breed}</p>
+                            <p><strong>Known Allergies:</strong> ${pet.known_allergies}</p>
+                            <p><strong>Owner Name:</strong> ${pet.owner_name}</p>
+                            <p><strong>Owner Contact:</strong> ${pet.owner_contact}</p>
+                        `;
+                        profilePopup.style.display = 'block';
+                    });
+        
+                    // Close popup when clicking outside
+                    document.addEventListener('click', function(event) {
+                        if (!profilePic.contains(event.target) && !profilePopup.contains(event.target)) {
+                            profilePopup.style.display = 'none';
+                        }
+                    });
+                })
+                .catch(error => console.error('Error loading pets data:', error));
+        });
+        
+    </script>
+</body>
+</html>

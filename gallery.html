@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Pet Dog Wellness & Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .navbar {
+            background-color: #66B2A5 !important;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+        }
+        .btn-primary {
+            background-color: #66B2A5;
+            border-color: #66B2A5;
+        }
+        .btn-primary:hover {
+            background-color: #4D8A7B;
+            border-color: #4D8A7B;
+        }
+        .btn-secondary {
+            background-color: #63CB8C;
+            border-color: #63CB8C;
+        }
+        .btn-secondary:hover {
+            background-color: #4BA96D;
+            border-color: #4BA96D;
+        }
+        .carousel-item {
+            height: 300px;
+            background-color: #66B2A5;
+            color: #2C6E49;
+        }
+        .carousel-caption {
+            background-color: rgba(219, 240, 228, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .gallery-item {
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .gallery-item img:hover {
+            transform: scale(1.1);
+        }
+        footer {
+            background-color: #66B2A5;
+            color: #ffffff;
+        }
+        .modal-content {
+            background-color: #66B2A5;
+        }
+        .social-icon {
+            color: #2C6E49;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .social-icon:hover, .mail:hover {
+            color: #ffffff;
+        }
+        #blogs_text:hover {
+            color: #ffffff;
+        }
+        #blogs_text{
+            text-decoration: wavy; color:#2C6E49 ;
+            font-weight: 600;
+        }
+        .mail{
+            text-decoration: wavy; color:#2C6E49 ;
+            font-weight: 600;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #ffffff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid white;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        .profile-popup {
+            display: none;
+            position: fixed; /* Centering */
+            left: 50%; /* Centering */
+            top: 50%; /* Centering */
+            transform: translate(-50%, -50%); /* Centering */
+            background-color: #ffffff; /* White background for contrast */
+            border: 1px solid #2C6E49;
+            border-radius: 15px; /* Rounded corners */
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px; /* Fixed width for consistency */
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .profile-container {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <img src="Pawsitive-removebg-preview.png" alt="Logo" width="70px" height="70px" style="color: white;" class="img-fluid rounded">
+            <a class="navbar-brand" href="./index.html"> Pet Dog Wellness & Care</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Veterinarians.html">Veterinarians</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/tools.html">Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./blog.html">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Dog_care.html">Dog Care</a></li>
+                    <li class="nav-item profile-container">
+                        <img src="./profile.jpg" alt="Profile" class="profile-pic" id="profilePic">
+                        <div class="profile-popup" id="profilePopup">
+                            <h5>Pet Profile</h5>
+                            <div id="petInfo"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Dog Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="Labrador Retriever.jpg" data-title="Labrador">
+                <img src="Labrador Retriever.jpg" alt="Happy Labrador">
+                <p>Labrador</p>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="Poodle.jpg" data-title="Poodle">
+                <img src="Poodle.jpg" alt="Playful Poodle">
+                <p>Poodle</p>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="German Shepherd.jpg" data-title="German Shepherd">
+                <img src="German Shepherd.jpg" alt="Alert German Shepherd">
+                <p>German Shepherd</p>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="Corgi.JPG" data-title="Corgi">
+                <img src="Corgi.JPG" alt="Cute Corgi">
+                <p>Corgi</p>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="Beagle.jpg" data-title="Beagle">
+                <img src="Beagle.jpg" alt="Sleepy Beagle">
+                <p>Beagle</p>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="Collie.jpg" data-title="Collie">
+                <img src="Collie.jpg" alt="Energetic Border Collie">
+                <p>Collie</p>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="Golden Retriever.jpg" data-title="Golden Retriever">
+                <img src="Golden Retriever.jpg" alt="Gentle Golden Retriever">
+                <p>Golden Retriever</p>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="Dachshund.jpg" data-title="Dachshund">
+                <img src="Dachshund.jpg" alt="Curious Dachshund">
+                <p>Dachshund</p>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="Husky.png" data-title="Husky">
+                <img src="Husky.png" alt="Majestic Husky">
+                <p>Husky</p>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="Bulldog.jpg" data-title="Bulldog">
+                <img src="Bulldog.jpg" alt="Friendly Bulldog">
+                <p>Bulldog</p>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="Dalmatian.jpg" data-title="Dalmatian">
+                <img src="Dalmatian.jpg" alt="Elegant Dalmatian">
+                <p>Dalmatian</p>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="Rottweiler.jpg" data-title="Rottweiler">
+                <img src="Rottweiler.jpg" alt="Loyal Rottweiler">
+                <p>Rottweiler</p>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="Chihuahua.jpg" data-title="Chihuahua">
+                <img src="Chihuahua.jpg" alt="Tiny Chihuahua">
+                <p>Chihuahua</p>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="pomeranian.jpeg" data-title="Pomeranian">
+                <img src="pomeranian.jpeg" alt="Fluffy Pomeranian">
+                <p>Pomeranian</p>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="Greyhound.jpg" data-title="Greyhound">
+                <img src="Greyhound.jpg" alt="Graceful Greyhound">
+                <p>Greyhound</p>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="SharPei.jpeg" data-title="Shar Pei">
+                <img src="SharPei.jpeg" alt="Wrinkly Shar Pei">
+                <p>Shar Pei</p>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="Boxer.jpg" data-title="Boxer">
+                <img src="Boxer.jpg" alt="Energetic Boxer">
+                <p>Boxer</p>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="pug.jpeg" data-title="Pug">
+                <img src="pug.jpeg" alt="Clever Pug">
+                <p>Pug</p>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="Affectionate Newfoundland.png" data-title="Newfoundland">
+                <img src="Affectionate Newfoundland.png" alt="Affectionate Newfoundland">
+                <p>Newfoundland</p>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="Spirited Jack Russell.jpg" data-title="Jack Russell">
+                <img src="Spirited Jack Russell.jpg" alt="Spirited Jack Russell">
+                <p>Jack Russell</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <span class="close" data-bs-dismiss="modal" aria-label="Close">&times;</span>
+                <img src="" alt="" class="img-fluid" id="modalImage">
+                <div class="modal-body text-center">
+                    <h5 id="modalTitle"></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-5 py-4" style="background-color: #66B2A5;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>We are dedicated to providing the best care for your furry friends. Our team of experienced veterinarians and staff are committed to your pet's health and well-being.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Latest Blog Posts</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">10 Tips for a Healthy Dog</a></li>
+                        <li><a href="#" class="text-dark">Understanding Your Dog's Behavior</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email: info@petdogwellness.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <div>
+                        <a href="#" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JavaScript to handle the image modal
+        document.addEventListener('DOMContentLoaded', function() {
+            var modalImage = document.getElementById('modalImage');
+            var modalTitle = document.getElementById('modalTitle');
+
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    var imageSrc = this.getAttribute('data-image');
+                    var title = this.getAttribute('data-title');
+                    modalImage.src = imageSrc;
+                    modalTitle.textContent = title;
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const profilePic = document.getElementById('profilePic');
+            const profilePopup = document.getElementById('profilePopup');
+            const petInfo = document.getElementById('petInfo');
+        
+            // Fetch pets data from JSON file
+            fetch('pets.json')
+                .then(response => response.json())
+                .then(data => {
+                    const pet = data.pet; // Access the pet object directly
+        
+                    profilePic.addEventListener('click', function(event) {
+                        event.stopPropagation(); // Prevents event bubbling
+        
+                        // Display pet information
+                        petInfo.innerHTML = `
+                            <p><strong>Pet ID:</strong> ${pet.pet_id}</p>
+                            <p><strong>Name:</strong> ${pet.pet_name}</p>
+                            <p><strong>Age:</strong> ${pet.age}</p>
+                            <p><strong>Breed:</strong> ${pet.breed}</p>
+                            <p><strong>Known Allergies:</strong> ${pet.known_allergies}</p>
+                            <p><strong>Owner Name:</strong> ${pet.owner_name}</p>
+                            <p><strong>Owner Contact:</strong> ${pet.owner_contact}</p>
+                        `;
+                        profilePopup.style.display = 'block';
+                    });
+        
+                    // Close popup when clicking outside
+                    document.addEventListener('click', function(event) {
+                        if (!profilePic.contains(event.target) && !profilePopup.contains(event.target)) {
+                            profilePopup.style.display = 'none';
+                        }
+                    });
+                })
+                .catch(error => console.error('Error loading pets data:', error));
+        });
+        
+    </script>
+</body>
+</html>

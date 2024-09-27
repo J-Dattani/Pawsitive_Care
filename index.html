@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Dog Wellness & Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #DBF0E4;
+            color: #2C6E49;
+        }
+        .navbar {
+            background-color: #66B2A5 !important;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+        }
+        .btn-primary {
+            background-color: #66B2A5;
+            border-color: #66B2A5;
+        }
+        .btn-primary:hover {
+            background-color: #4D8A7B;
+            border-color: #4D8A7B;
+        }
+        .btn-secondary {
+            background-color: #63CB8C;
+            border-color: #63CB8C;
+        }
+        .btn-secondary:hover {
+            background-color: #4BA96D;
+            border-color: #4BA96D;
+        }
+        .card {
+            background-color: #DBF0E4;
+            border: 1px solid #2C6E49;
+        }
+        .testimonial {
+            background-color: #DBF0E4;
+            border: 1px solid #2C6E49;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .testimonial img {
+            max-width: 100px;
+            border-radius: 50%;
+        }
+        footer {
+            background-color: #66B2A5;
+            color: #ffffff;
+        }
+        .social-icon {
+            color: #2C6E49;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .social-icon:hover, .mail:hover {
+            color: #ffffff;
+        }
+        #blogs_text:hover {
+            color: #ffffff;
+        }
+        #blogs_text{
+            text-decoration: wavy; color:#2C6E49 ;
+            font-weight: 600;
+        }
+        .mail{
+            text-decoration: wavy; color:#2C6E49 ;
+            font-weight: 600;
+        }
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid white;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        .profile-popup {
+            display: none;
+            position: fixed; /* Centering */
+            left: 50%; /* Centering */
+            top: 50%; /* Centering */
+            transform: translate(-50%, -50%); /* Centering */
+            background-color: #ffffff; /* White background for contrast */
+            border: 1px solid #2C6E49;
+            border-radius: 15px; /* Rounded corners */
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px; /* Fixed width for consistency */
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .profile-container {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <img src="Pawsitive-removebg-preview.png" alt="Logo" width="70px" height="70px" style="color: white;" class="img-fluid rounded">
+            <a class="navbar-brand" href="./index.html"> Pet Dog Wellness & Care</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Veterinarians.html">Veterinarians</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/tools.html">Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./blog.html">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Dog_care.html">Dog Care</a></li>
+                    <li class="nav-item profile-container">
+                        <img src="./profile.jpg" alt="Profile" class="profile-pic" id="profilePic">
+                        <div class="profile-popup" id="profilePopup">
+                            <h5>Pet Profile</h5>
+                            <div id="petInfo"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1>Welcome to our website</h1><br>
+                <h5>Are you a dog parent? We're here to help you keep your pup happy and healthy. Read more for a wide range of dog health and behavior tips that will help you provide the best possible care for your canine companion.</h5>
+            </div>
+            <div class="col-md-6">
+                <img src="husky-cafe-1.png" alt="Pet Dog" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div id="careSlider" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Surgery</h5>
+                            <p class="card-text"> Imagine your dog needs to get fixed or has a boo-boo that needs to be taken care of. Surgery is like a special kind of help that makes them feel better. It can be a minor procedure, like removing a skin tag, or a more complex operation, like fixing a broken bone. The goal is to make your dog comfortable and pain-free..</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Dental Care</h5>
+                            <p class="card-text">You know how dogs love to chew on things? Well, that can be bad for their teeth. Dental care is like a special cleaning that keeps their teeth strong and healthy. It includes regular brushing, dental chews, and professional cleanings to prevent tartar buildup and gum disease. Healthy teeth mean a healthy dog!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Mental Care</h5>
+                            <p class="card-text">Dogs can get stressed or anxious just like humans do. Mental care is like a big hug for their feelings, helping them feel calm and relaxed. It can include training, socialization, and even therapy to help your dog cope with loud noises, separation anxiety, or other issues. A happy dog is a relaxed dog!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Physical Evaluation</h5>
+                            <p class="card-text"> This is like a doggy check-up, where the vet makes sure everything is working properly and there are no hidden health issues. It includes a physical exam, checking vital signs, and running tests to detect any potential problems early on. Regular check-ups can help prevent illnesses and catch any issues before they become serious.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#careSlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#careSlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <h2>Gallery Preview</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="Labrador Retriever.jpg" alt="Dog 1" class="img-fluid rounded">
+            </div>
+            <div class="col-md-3">
+                <img src="Poodle.jpg" alt="Dog 2" class="img-fluid rounded">
+            </div>
+            <div class="col-md-3">
+                <img src="German Shepherd.jpg" alt="Dog 3" class="img-fluid rounded">
+            </div>
+            <div class="col-md-3">
+                <img src="Corgi.JPG" alt="Dog 4" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="download.jpeg" alt="Dr. Smith"  class="img-fluid">
+                </div>
+                <div class="col-md-10">
+                    <h4>Dr. Jane Smith</h4>
+                    <p><strong>Specialty:</strong> Canine Orthopedics</p>
+                    <p><strong>Date:</strong> June 15, 2023</p>
+                    <p>"With over 15 years of experience in canine orthopedics, I've seen firsthand the importance of early intervention and proper care. Our clinic's approach to dog wellness has significantly improved the quality of life for countless furry patients."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-4 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>We are dedicated to providing the best care for your furry friends. Our team of experienced veterinarians and staff are committed to your pet's health and well-being.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Latest Blog Posts</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark" id="blogs_text">10 Tips for a Healthy Dog</a></li>
+                        <li><a href="#" class="text-dark" id="blogs_text">Understanding Your Dog's Behavior</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email:  <a class="mail" href="pawsitivecare069@gmail.com">pawsitivecare069@gmail.com</a> </p>
+                    <p>Phone: (123) 456-7890</p>
+                    <div>
+                        <a href="https://www.facebook.com/profile.php?id=61565951776773" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/PawsitiveC069" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/pawsitivecare_069/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var myCarousel = document.querySelector('#careSlider')
+            var carousel = new bootstrap.Carousel(myCarousel, {
+                interval: 3000,
+                pause: 'hover'
+            })
+
+            // New profile popup JavaScript
+            const profilePic = document.getElementById('profilePic');
+            const profilePopup = document.getElementById('profilePopup');
+            const petInfo = document.getElementById('petInfo');
+
+            // Fetch pets data from JSON file
+            fetch('pets.json')
+                .then(response => response.json())
+                .then(data => {
+                    const pet = data.pet; // Access the pet object directly
+
+                    profilePic.addEventListener('click', function() {
+                        if (profilePopup.style.display === 'block') {
+                            profilePopup.style.display = 'none';
+                        } else {
+                            // Display pet information
+                            petInfo.innerHTML = `
+                                <p><strong>Pet ID:</strong> ${pet.pet_id}</p>
+                                <p><strong>Name:</strong> ${pet.pet_name}</p>
+                                <p><strong>Age:</strong> ${pet.age}</p>
+                                <p><strong>Breed:</strong> ${pet.breed}</p>
+                                <p><strong>Known Allergies:</strong> ${pet.known_allergies}</p>
+                                <p><strong>Owner Name:</strong> ${pet.owner_name}</p>
+                                <p><strong>Owner Contact:</strong> ${pet.owner_contact}</p>
+                            `;
+                            profilePopup.style.display = 'block';
+                        }
+                    });
+
+                    // Close popup when clicking outside
+                    document.addEventListener('click', function(event) {
+                        if (!profilePic.contains(event.target) && !profilePopup.contains(event.target)) {
+                            profilePopup.style.display = 'none';
+                        }
+                    });
+                })
+                .catch(error => console.error('Error loading pets data:', error));
+        })
+    </script>
+</body>
+</html>

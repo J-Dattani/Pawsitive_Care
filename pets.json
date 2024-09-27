@@ -1,0 +1,11 @@
+{
+  "pet": {
+    "pet_id": 1,
+    "pet_name": "Buddy",
+    "age": 4,
+    "breed": "Golden Retriever",
+    "known_allergies": "Pollen",
+    "owner_name": "John Doe",
+    "owner_contact": "555-1234"
+  }
+}
