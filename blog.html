@@ -71,62 +71,13 @@
             bottom: 20px;
             right: 20px;
         }
-        footer {
-            background-color: #66B2A5;
-            color: #ffffff;
-        }
-        .social-icon {
-            color: #2C6E49;
-            font-size: 24px;
-            margin-right: 10px;
-        }
-        .social-icon:hover, .mail:hover {
-            color: #ffffff;
-        }
-        #blogs_text:hover {
-            color: #ffffff;
-        }
-        #blogs_text{
-            text-decoration: wavy; color:#2C6E49 ;
-            font-weight: 600;
-        }
-        .mail{
-            text-decoration: wavy; color:#2C6E49 ;
-            font-weight: 600;
-        }
-        .profile-pic {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 2px solid white;
-            object-fit: cover;
-            cursor: pointer;
-        }
-        .profile-popup {
-            display: none;
-            position: fixed; /* Centering */
-            left: 50%; /* Centering */
-            top: 50%; /* Centering */
-            transform: translate(-50%, -50%); /* Centering */
-            background-color: #ffffff; /* White background for contrast */
-            border: 1px solid #2C6E49;
-            border-radius: 15px; /* Rounded corners */
-            padding: 20px;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 300px; /* Fixed width for consistency */
-            box-sizing: border-box; /* Include padding in width */
-        }
-        .profile-container {
-            position: relative;
-        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <img src="Pawsitive-removebg-preview.png" alt="Logo" width="70px" height="70px" style="color: white;" class="img-fluid rounded">
-            <a class="navbar-brand" href="./index.html"> Pet Dog Wellness & Care</a>
+            <img src="Pawsitive-removebg-preview.png" alt="Logo" width="70" height="70" class="d-inline-block align-top me-2">
+            <a class="navbar-brand" href="#">Pet Dog Wellness & Care</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -135,16 +86,9 @@
                     <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="./Veterinarians.html">Veterinarians</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/tools.html">Tools</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./blog.html">Blogs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./Dog_care.html">Dog Care</a></li>
-                    <li class="nav-item profile-container">
-                        <img src="./profile.jpg" alt="Profile" class="profile-pic" id="profilePic">
-                        <div class="profile-popup" id="profilePopup">
-                            <h5>Pet Profile</h5>
-                            <div id="petInfo"></div>
-                        </div>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="./tools.html">Tools</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./blog.html">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about_us.html">About Us</a></li>
                 </ul>
             </div>
         </div>
@@ -156,7 +100,7 @@
         <div class="row g-4">
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100">
-                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Dog training basics">
+                    <img src="c:\Users\lenovo\Desktop\dogcare\doptme.jpeg" class="card-img-top" alt="Dog">
                     <div class="card-body">
                         <h5 class="card-title">How Much Does It Cost to Adopt a Dog?</h5>
                         <p class="card-text">Are you thinking of adding a furry friend to your family? Adopting a dog can be an incredibly rewarding experience, but it's essential to understand the costs involved..</p>
@@ -168,194 +112,96 @@
             
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100">
-                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Nutrition for dogs">
+                    <img src="c:\Users\lenovo\Desktop\dogcare\doglik.webp" class="card-img-top" alt="dog licking paw">
                     <div class="card-body">
-                        <h5 class="card-title">Nutrition 101: What Your Dog Really Needs</h5>
-                        <p class="card-text">Discover the essential nutrients your dog needs for optimal health and how to provide them.</p>
-                        <p class="blog-author">By Dr. Michael Lee</p>
-                        <p class="blog-date">June 10, 2023</p>
-                        <a href="#" class="btn btn-primary read-more">Read More</a>
+                        <h5 class="card-title">Why Do Dogs Lick Their Paws? 7 Red Flags To Watch For</h5>
+                        <p class="card-text">Dogs are known for their quirky behaviors, and paw licking is one that often puzzles pet owners. </p>
+                        <p class="blog-author">By Dr. Ricky Walther</p>
+                        <a href="https://www.pawlicy.com/blog/why-do-dogs-lick-their-paws/" class="btn btn-primary read-more">Read More</a>
                     </div>
                 </div>
             </div>
             
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100">
-                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Exercise for dogs">
+                    <img src="c:\Users\lenovo\Desktop\dogcare\doganx.webp" class="card-img-top" alt="dogs seperation anxiety">
                     <div class="card-body">
-                        <h5 class="card-title">Fun Exercise Ideas for You and Your Dog</h5>
-                        <p class="card-text">Explore creative ways to keep your dog active and healthy while bonding with them.</p>
-                        <p class="blog-author">By Emma Thompson</p>
-                        <p class="blog-date">June 5, 2023</p>
-                        <a href="#" class="btn btn-primary read-more">Read More</a>
+                        <h5 class="card-title">Separation Anxiety in Dogs: A Pet Owner's Guide</h5>
+                        <p class="card-text">The COVID-19 pandemic ushered in an era in which dog owners spent an unprecedented amount of time at home, fostering a deeper bond between humans and their furry companions.</p>
+                        <p class="blog-author">By Dr. Ricky Walther, Kaelee Nelson</p>
+                        <a href="https://www.pawlicy.com/blog/separation-anxiety-in-dogs/" class="btn btn-primary read-more">Read More</a>
                     </div>
                 </div>
             </div>
             
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100">
-                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Grooming tips">
+                    <img src="c:\Users\lenovo\Desktop\dogcare\dogover.webp" class="card-img-top" alt="feeding leftovers">
                     <div class="card-body">
-                        <h5 class="card-title">Essential Grooming Tips for a Happy, Healthy Dog</h5>
-                        <p class="card-text">Learn the basics of dog grooming and how to make it a positive experience for your pet.</p>
-                        <p class="blog-author">By Lisa Anderson</p>
-                        <p class="blog-date">May 30, 2023</p>
-                        <a href="#" class="btn btn-primary read-more">Read More</a>
+                        <h5 class="card-title">Giving Leftovers to Your Dog: The Dos and Don’ts</h5>
+                        <p class="card-text">Our furry friends are pretty smart and know that turning on the charm will pull on our heartstrings, perhaps earning them a tasty treat or two.</p>
+                        <p class="blog-author">By Wellbeing for dogs</p>
+                        <a href="https://wellbeingfordogs.com.au/blogs/wellbeing/giving-leftovers-to-your-dog" class="btn btn-primary read-more">Read More</a>
                     </div>
                 </div>
             </div>
             
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100">
-                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Behavioral issues">
+                    <img src="c:\Users\lenovo\Desktop\dogcare\dogsnez.jpeg" class="card-img-top" alt="dog sneezing">
                     <div class="card-body">
-                        <h5 class="card-title">Addressing Common Behavioral Issues in Dogs</h5>
-                        <p class="card-text">Understand and solve common dog behavior problems with these expert tips.</p>
-                        <p class="blog-author">By Dr. Robert Brown</p>
-                        <p class="blog-date">May 25, 2023</p>
-                        <a href="#" class="btn btn-primary read-more">Read More</a>
+                        <h5 class="card-title">Allergies In Dogs: Causes, Symptoms, Treatments & Costs</h5>
+                        <p class="card-text">Does your dog constantly lick, chew, or scratch himself? Are you constantly wondering, “Why is my dog so itchy?” These could be tell-tale indicators that your dog has allergies.</p>
+                        <p class="blog-author">By Dr. Lila Batiari</p>
+                        <a href="https://www.pawlicy.com/blog/allergies-in-dogs/" class="btn btn-primary read-more">Read More</a>
                     </div>
                 </div>
             </div>
             
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100">
-                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Puppy care">
+                    <img src="c:\Users\lenovo\Desktop\dogcare\dogeat.webp" class="card-img-top" alt="dog diet">
                     <div class="card-body">
-                        <h5 class="card-title">The Ultimate Guide to Puppy Care</h5>
-                        <p class="card-text">Everything you need to know about caring for your new puppy in their first year.</p>
-                        <p class="blog-author">By Jennifer White</p>
-                        <p class="blog-date">May 20, 2023</p>
-                        <a href="#" class="btn btn-primary read-more">Read More</a>
+                        <h5 class="card-title">'Balanced and Complete' - What Does It Mean?</h5>
+                        <p class="card-text">Part of the marketing spin on why we need to feed our dogs commercial pet food is that it is ‘balanced and complete’.</p>
+                        <p class="blog-author">By Wellbeing for Dogs</p>
+                        <a href="https://wellbeingfordogs.com.au/blogs/wellbeing/balanced-and-complete-what-does-it-mean" class="btn btn-primary read-more">Read More</a>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Senior dog care">
-                    <div class="card-body">
-                        <h5 class="card-title">Caring for Your Senior Dog: Tips and Advice</h5>
-                        <p class="card-text">Learn how to keep your older dog comfortable and healthy in their golden years.</p>
-                        <p class="blog-author">By Dr. Emily Carter</p>
-                        <p class="blog-date">May 15, 2023</p>
-                        <a href="#" class="btn btn-primary read-more">Read More</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Dog-friendly home">
-                    <div class="card-body">
-                        <h5 class="card-title">Creating a Dog-Friendly Home: Safety and Comfort</h5>
-                        <p class="card-text">Discover how to make your home safe, comfortable, and enriching for your canine companion.</p>
-                        <p class="blog-author">By Mark Robinson</p>
-                        <p class="blog-date">May 10, 2023</p>
-                        <a href="#" class="btn btn-primary read-more">Read More</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Dog socialization">
-                    <div class="card-body">
-                        <h5 class="card-title">The Importance of Socialization for Dogs</h5>
-                        <p class="card-text">Learn why socialization is crucial for dogs and how to do it effectively at any age.</p>
-                        <p class="blog-author">By Amanda Foster</p>
-                        <p class="blog-date">May 5, 2023</p>
-                        <a href="#" class="btn btn-primary read-more">Read More</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Dog health checks">
-                    <div class="card-body">
-                        <h5 class="card-title">Essential Health Checks for Your Dog</h5>
-                        <p class="card-text">A guide to routine health checks you can perform at home to keep your dog healthy.</p>
-                        <p class="blog-author">By Dr. James Wilson</p>
-                        <p class="blog-date">April 30, 2023</p>
-                        <a href="#" class="btn btn-primary read-more">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <footer class="mt-4 py-4">
+           
+
+    <footer class="mt-5 py-4" style="background-color: #66B2A5;">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h5>About Us</h5>
-                    <p>We are dedicated to providing the best care for your furry friends. Our team of experienced veterinarians and staff are committed to your pet's health and well-being.</p>
+                    <h5 class="text-white">About Us</h5>
+                    <p class="text-white">We are dedicated to providing the best care for your furry friends. Our team of experienced veterinarians and staff are committed to your pet's health and well-being.</p>
                 </div>
                 <div class="col-md-4">
-                    <h5>Latest Blog Posts</h5>
+                    <h5 class="text-white">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-dark" id="blogs_text">10 Tips for a Healthy Dog</a></li>
-                        <li><a href="#" class="text-dark" id="blogs_text">Understanding Your Dog's Behavior</a></li>
+                        <li><a href="./index.html" class="text-white">Home</a></li>
+                        <li><a href="./gallery.html" class="text-white">Gallery</a></li>
+                        <li><a href="./Veterinarians.html" class="text-white">Veterinarians</a></li>
+                        <li><a href="./tools.html" class="text-white">Tools</a></li>
+                        <li><a href="./about_us.html" class="text-white">About Us</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h5>Contact Us</h5>
-                    <p>Email:  <a class="mail" href="pawsitivecare069@gmail.com">pawsitivecare069@gmail.com</a> </p>
-                    <p>Phone: (123) 456-7890</p>
+                    <h5 class="text-white">Contact Us</h5>
+                    <p class="text-white">Email: info@petdogwellness.com</p>
+                    <p class="text-white">Phone: (123) 456-7890</p>
                     <div>
-                        <a href="https://www.facebook.com/profile.php?id=61565951776773" class="social-icon"><i class="fab fa-facebook"></i></a>
-                        <a href="https://x.com/PawsitiveC069" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/pawsitivecare_069/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const profilePic = document.getElementById('profilePic');
-            const profilePopup = document.getElementById('profilePopup');
-            const petInfo = document.getElementById('petInfo');
-        
-            // Hardcoded pet data
-            const pet = {
-                pet_id: 1,
-                pet_name: "Buddy",
-                age: 3,
-                breed: "Labrador",
-                known_allergies: "None",
-                owner_name: "John Doe",
-                owner_contact: "123-456-7890"
-            };
-        
-            profilePic.addEventListener('click', function(event) {
-                event.stopPropagation(); // Prevents event bubbling
-        
-                // Display pet information
-                petInfo.innerHTML = `
-                    <p><strong>Pet ID:</strong> ${pet.pet_id}</p>
-                    <p><strong>Name:</strong> ${pet.pet_name}</p>
-                    <p><strong>Age:</strong> ${pet.age}</p>
-                    <p><strong>Breed:</strong> ${pet.breed}</p>
-                    <p><strong>Known Allergies:</strong> ${pet.known_allergies}</p>
-                    <p><strong>Owner Name:</strong> ${pet.owner_name}</p>
-                    <p><strong>Owner Contact:</strong> ${pet.owner_contact}</p>
-                `;
-                profilePopup.style.display = 'block';
-            });
-        
-            // Close popup when clicking outside
-            document.addEventListener('click', function(event) {
-                if (!profilePic.contains(event.target) && !profilePopup.contains(event.target)) {
-                    profilePopup.style.display = 'none';
-                }
-            });
-        });
-        
-
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
