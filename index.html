@@ -25,14 +25,6 @@
             background-color: #4D8A7B;
             border-color: #4D8A7B;
         }
-        .btn-secondary {
-            background-color: #63CB8C;
-            border-color: #63CB8C;
-        }
-        .btn-secondary:hover {
-            background-color: #4BA96D;
-            border-color: #4BA96D;
-        }
         .card {
             background-color: #DBF0E4;
             border: 1px solid #2C6E49;
@@ -63,12 +55,14 @@
         #blogs_text:hover {
             color: #ffffff;
         }
-        #blogs_text{
-            text-decoration: wavy; color:#2C6E49 ;
+        #blogs_text {
+            text-decoration: wavy; 
+            color: #2C6E49;
             font-weight: 600;
         }
-        .mail{
-            text-decoration: wavy; color:#2C6E49 ;
+        .mail {
+            text-decoration: wavy; 
+            color: #2C6E49;
             font-weight: 600;
         }
         .profile-pic {
@@ -97,12 +91,19 @@
         .profile-container {
             position: relative;
         }
+        .img-hover {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .img-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <img src="Pawsitive-removebg-preview.png" alt="Logo" width="70px" height="70px" style="color: white;" class="img-fluid rounded">
+            <img src="Pawsitive-removebg-preview.png" alt="Logo" width="70px" height="70px" class="img-fluid rounded">
             <a class="navbar-brand" href="./index.html"> Pet Dog Wellness & Care</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -134,7 +135,7 @@
                 <h5>Are you a dog parent? We're here to help you keep your pup happy and healthy. Read more for a wide range of dog health and behavior tips that will help you provide the best possible care for your canine companion.</h5>
             </div>
             <div class="col-md-6">
-                <img src="husky-cafe-1.png" alt="Pet Dog" class="img-fluid rounded">
+                <img src="husky-cafe-1.png" alt="Pet Dog" class="img-fluid rounded img-hover">
             </div>
         </div>
     </div>
@@ -146,7 +147,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Surgery</h5>
-                            <p class="card-text"> Imagine your dog needs to get fixed or has a boo-boo that needs to be taken care of. Surgery is like a special kind of help that makes them feel better. It can be a minor procedure, like removing a skin tag, or a more complex operation, like fixing a broken bone. The goal is to make your dog comfortable and pain-free..</p>
+                            <p class="card-text">Imagine your dog needs to get fixed or has a boo-boo that needs to be taken care of. Surgery is like a special kind of help that makes them feel better. It can be a minor procedure, like removing a skin tag, or a more complex operation, like fixing a broken bone. The goal is to make your dog comfortable and pain-free.</p>
                         </div>
                     </div>
                 </div>
@@ -170,7 +171,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Physical Evaluation</h5>
-                            <p class="card-text"> This is like a doggy check-up, where the vet makes sure everything is working properly and there are no hidden health issues. It includes a physical exam, checking vital signs, and running tests to detect any potential problems early on. Regular check-ups can help prevent illnesses and catch any issues before they become serious.</p>
+                            <p class="card-text">This is like a doggy check-up, where the vet makes sure everything is working properly and there are no hidden health issues. It includes a physical exam, checking vital signs, and running tests to detect any potential problems early on. Regular check-ups can help prevent illnesses and catch any issues before they become serious.</p>
                         </div>
                     </div>
                 </div>
@@ -190,16 +191,16 @@
         <h2>Gallery Preview</h2>
         <div class="row">
             <div class="col-md-3">
-                <img src="Labrador Retriever.jpg" alt="Dog 1" class="img-fluid rounded">
+                <img src="Labrador Retriever.jpg" alt="Dog 1" class="img-fluid rounded img-hover">
             </div>
             <div class="col-md-3">
-                <img src="Poodle.jpg" alt="Dog 2" class="img-fluid rounded">
+                <img src="Poodle.jpg" alt="Dog 2" class="img-fluid rounded img-hover">
             </div>
             <div class="col-md-3">
-                <img src="German Shepherd.jpg" alt="Dog 3" class="img-fluid rounded">
+                <img src="German Shepherd.jpg" alt="Dog 3" class="img-fluid rounded img-hover">
             </div>
             <div class="col-md-3">
-                <img src="Corgi.JPG" alt="Dog 4" class="img-fluid rounded">
+                <img src="Corgi.JPG" alt="Dog 4" class="img-fluid rounded img-hover">
             </div>
         </div>
     </div>
@@ -209,7 +210,7 @@
         <div class="testimonial">
             <div class="row">
                 <div class="col-md-2">
-                    <img src="download.jpeg" alt="Dr. Smith"  class="img-fluid">
+                    <img src="download.jpeg" alt="Dr. Smith" class="img-fluid img-hover">
                 </div>
                 <div class="col-md-10">
                     <h4>Dr. Jane Smith</h4>
@@ -237,7 +238,7 @@
                 </div>
                 <div class="col-md-4">
                     <h5>Contact Us</h5>
-                    <p>Email:  <a class="mail" href="pawsitivecare069@gmail.com">pawsitivecare069@gmail.com</a> </p>
+                    <p>Email: <a class="mail" href="mailto:pawsitivecare069@gmail.com">pawsitivecare069@gmail.com</a></p>
                     <p>Phone: (123) 456-7890</p>
                     <div>
                         <a href="https://www.facebook.com/profile.php?id=61565951776773" class="social-icon"><i class="fab fa-facebook"></i></a>
@@ -257,24 +258,21 @@
             var carousel = new bootstrap.Carousel(myCarousel, {
                 interval: 3000,
                 pause: 'hover'
-            })
+            });
 
-            // New profile popup JavaScript
             const profilePic = document.getElementById('profilePic');
             const profilePopup = document.getElementById('profilePopup');
             const petInfo = document.getElementById('petInfo');
 
-            // Fetch pets data from JSON file
             fetch('pets.json')
                 .then(response => response.json())
                 .then(data => {
-                    const pet = data.pet; // Access the pet object directly
+                    const pet = data.pet;
 
                     profilePic.addEventListener('click', function() {
                         if (profilePopup.style.display === 'block') {
                             profilePopup.style.display = 'none';
                         } else {
-                            // Display pet information
                             petInfo.innerHTML = `
                                 <p><strong>Pet ID:</strong> ${pet.pet_id}</p>
                                 <p><strong>Name:</strong> ${pet.pet_name}</p>
@@ -288,7 +286,6 @@
                         }
                     });
 
-                    // Close popup when clicking outside
                     document.addEventListener('click', function(event) {
                         if (!profilePic.contains(event.target) && !profilePopup.contains(event.target)) {
                             profilePopup.style.display = 'none';
@@ -296,7 +293,7 @@
                     });
                 })
                 .catch(error => console.error('Error loading pets data:', error));
-        })
+        });
     </script>
 </body>
 </html>
