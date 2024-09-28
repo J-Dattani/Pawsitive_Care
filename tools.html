@@ -260,34 +260,372 @@
             </div>
         </div>
     </div>
-
-    <footer class="mt-5 py-4" style="background-color: #66B2A5;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>About Us</h5>
-                    <p>We are dedicated to providing the best care for your furry friends. Our team of experienced veterinarians and staff are committed to your pet's health and well-being.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Latest Blog Posts</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-dark">10 Tips for a Healthy Dog</a></li>
-                        <li><a href="#" class="text-dark">Understanding Your Dog's Behavior</a></li>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pet Dog Wellness and Care</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body {
+                background-color: #DBF0E4;
+                color: #2C6E49;
+            }
+            .navbar {
+                background-color: #66B2A5 !important;
+            }
+            .navbar-brand, .nav-link {
+                color: #ffffff !important;
+            }
+            .btn-primary {
+                background-color: #66B2A5;
+                border-color: #66B2A5;
+            }
+            .btn-primary:hover {
+                background-color: #4D8A7B;
+                border-color: #4D8A7B;
+            }
+            .btn-secondary {
+                background-color: #63CB8C;
+                border-color: #63CB8C;
+            }
+            .btn-secondary:hover {
+                background-color: #4BA96D;
+                border-color: #4BA96D;
+            }
+            .card {
+                background-color: #DBF0E4;
+                border: 1px solid #2C6E49;
+            }
+            .testimonial {
+                background-color: #DBF0E4;
+                border: 1px solid #2C6E49;
+                border-radius: 15px;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            .testimonial img {
+                max-width: 100px;
+                border-radius: 50%;
+            }
+            footer {
+                background-color: #66B2A5;
+                color: #ffffff;
+            }
+            .social-icon {
+                color: #2C6E49;
+                font-size: 24px;
+                margin-right: 10px;
+            }
+            .social-icon:hover, .mail:hover {
+                color: #ffffff;
+            }
+            #blogs_text:hover {
+                color: #ffffff;
+            }
+            #blogs_text{
+                text-decoration: wavy; color:#2C6E49 ;
+                font-weight: 600;
+            }
+            .mail{
+                text-decoration: wavy; color:#2C6E49 ;
+                font-weight: 600;
+            }
+            .profile-pic {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: 2px solid white;
+                object-fit: cover;
+                cursor: pointer;
+            }
+            .profile-popup {
+                display: none;
+                position: fixed; /* Centering */
+                left: 50%; /* Centering */
+                top: 50%; /* Centering */
+                transform: translate(-50%, -50%); /* Centering */
+                background-color: #ffffff; /* White background for contrast */
+                border: 1px solid #2C6E49;
+                border-radius: 15px; /* Rounded corners */
+                padding: 20px;
+                z-index: 1000;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                width: 300px; /* Fixed width for consistency */
+                box-sizing: border-box; /* Include padding in width */
+            }
+            .profile-container {
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <img src="Pawsitive-removebg-preview.png" alt="Logo" width="70px" height="70px" style="color: white;" class="img-fluid rounded">
+                <a class="navbar-brand" href="./index.html"> Pet Dog Wellness & Care</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./Veterinarians.html">Veterinarians</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/tools.html">Tools</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./blog.html">Blogs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./Dog_care.html">Dog Care</a></li>
+                        <li class="nav-item profile-container">
+                            <img src="./profile.jpg" alt="Profile" class="profile-pic" id="profilePic">
+                            <div class="profile-popup" id="profilePopup">
+                                <h5>Pet Profile</h5>
+                                <div id="petInfo"></div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <h5>Contact Us</h5>
-                    <p>Email: info@petdogwellness.com</p>
-                    <p>Phone: (123) 456-7890</p>
-                    <div>
-                        <a href="#" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
+            </div>
+        </nav>
+    <br><br>3
+        <div class="container">
+            <h1 class="text-center mb-5">Pet Dog Wellness and Care Guide</h1>
+    
+            <div class="row" id="life-stages">
+                <div class="col-md-12 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Life Stages and Care</h2>
+                            <p class="card-text">Caring for a dog's well-being and health is a lifelong commitment that requires attention to various aspects, including nutrition, exercise, mental stimulation, and preventive care.</p>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#lifeStagesTool" aria-expanded="false" aria-controls="lifeStagesTool">
+                                Explore Life Stages
+                            </button>
+                            <div class="collapse mt-3" id="lifeStagesTool">
+                                <h3>Puppyhood (Birth to 1 Year)</h3>
+                                <ul>
+                                    <li>Nutrition: High-quality puppy food</li>
+                                    <li>Exercise & Socialization: Regular play and short walks</li>
+                                    <li>Training: Basic obedience and positive reinforcement</li>
+                                    <li>Preventive Care: Regular check-ups and vaccinations</li>
+                                </ul>
+                                <h3>Adolescence (1 to 3 Years)</h3>
+                                <ul>
+                                    <li>Nutrition: Switch to adult dog food</li>
+                                    <li>Exercise: 1-2 hours per day</li>
+                                    <li>Training: Reinforce and introduce advanced commands</li>
+                                    <li>Preventive Care: Annual check-ups and dental care</li>
+                                </ul>
+                                <h3>Adulthood (3 to 7 Years)</h3>
+                                <ul>
+                                    <li>Nutrition: Balanced diet for breed size and energy levels</li>
+                                    <li>Exercise: 45-90 minutes daily</li>
+                                    <li>Weight Management: Regular monitoring</li>
+                                    <li>Preventive Care: Annual vet visits and parasite control</li>
+                                </ul>
+                                <h3>Senior Dogs (7+ Years)</h3>
+                                <ul>
+                                    <li>Nutrition: Senior dog food with joint support</li>
+                                    <li>Exercise: Shorter, more frequent walks</li>
+                                    <li>Preventive Care: Bi-annual vet visits and screenings</li>
+                                    <li>Comfort: Provide a warm, quiet space for rest</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row" id="nutrition">
+                <div class="col-md-12 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Nutritional Plans</h2>
+                            <p class="card-text">A well-balanced diet is crucial for a dog's overall health and well-being. Learn about essential nutrients and how to create a healthy meal plan for your furry friend.</p>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#nutritionTool" aria-expanded="false" aria-controls="nutritionTool">
+                                Explore Nutrition
+                            </button>
+                            <div class="collapse mt-3" id="nutritionTool">
+                                <h3>Essential Nutrients</h3>
+                                <ul>
+                                    <li>Protein: For building and repairing tissues</li>
+                                    <li>Carbohydrates: For energy</li>
+                                    <li>Fats: For fatty acid intake and skin health</li>
+                                    <li>Vitamins and Minerals: For various bodily functions</li>
+                                    <li>Water: Always provide fresh water</li>
+                                </ul>
+                                <h3>Creating a Balanced Meal Plan</h3>
+                                <ul>
+                                    <li>Choose high-quality commercial dog food or consult a vet for homemade meals</li>
+                                    <li>Consider your dog's age, breed, and activity level</li>
+                                    <li>Practice portion control and avoid table scraps</li>
+                                    <li>Stick to a consistent feeding schedule</li>
+                                    <li>Monitor your dog's weight regularly</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row" id="allergies">
+                <div class="col-md-12 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Common Allergies and Prevention</h2>
+                            <p class="card-text">Allergies are a common health problem in dogs. Learn about different types of allergies and how to prevent them to improve your dog's quality of life.</p>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#allergiesTool" aria-expanded="false" aria-controls="allergiesTool">
+                                Explore Allergies
+                            </button>
+                            <div class="collapse mt-3" id="allergiesTool">
+                                <h3>Types of Dog Allergies</h3>
+                                <ul>
+                                    <li>Food Allergies: Skin issues, digestive problems</li>
+                                    <li>Environmental Allergies: Skin issues, sneezing, runny nose</li>
+                                    <li>Contact Allergies: Skin irritation, redness, itching</li>
+                                </ul>
+                                <h3>Prevention Tips</h3>
+                                <ul>
+                                    <li>Regular grooming to remove allergens</li>
+                                    <li>Keep your home clean and free of allergens</li>
+                                    <li>Wash your dog's bedding regularly</li>
+                                    <li>Limit exposure to harsh chemicals</li>
+                                    <li>Consult a veterinarian for proper diagnosis and treatment</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row" id="youtubers">
+                <div class="col-md-12 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Popular YouTubers for Dog Training and Wellbeing</h2>
+                            <p class="card-text">Discover valuable insights and tips on dog training and wellbeing from popular YouTubers.</p>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#youtubersTool" aria-expanded="false" aria-controls="youtubersTool">
+                                Explore YouTubers
+                            </button>
+                            <div class="collapse mt-3" id="youtubersTool">
+                                <h3>Dog Training</h3>
+                                <ul>
+                                    <li>Zak George: Positive reinforcement training methods</li>
+                                    <li>Kik Puppy: Puppy training and socialization</li>
+                                    <li>The Dog Trainer: Real-world dog training challenges</li>
+                                </ul>
+                                <h3>Dog Wellbeing</h3>
+                                <ul>
+                                    <li>The Honest Vet: Expert advice on dog health and nutrition</li>
+                                    <li>Tails of the City: Dog-friendly travel and activities</li>
+                                    <li>The Dodo: Heartwarming animal stories and care tips</li>
+                                </ul>
+                                <h3>Preview a Video</h3>
+                                <select id="youtubeSelect" class="form-select mb-3">
+                                    <option value="">Select a YouTuber</option>
+                                    <option value="zak-george">Zak George</option>
+                                    <option value="kik-puppy">Kik Puppy</option>
+                                    <option value="the-dog-trainer">The Dog Trainer</option>
+                                    <option value="the-honest-vet">The Honest Vet</option>
+                                    <option value="tails-of-the-city">Tails of the City</option>
+                                    <option value="the-dodo">The Dodo</option>
+                                </select>
+                                <div id="youtubePreview"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+    
+        <footer class="mt-4 py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>About Us</h5>
+                        <p>We are dedicated to providing the best care for your furry friends. Our team of experienced veterinarians and staff are committed to your pet's health and well-being.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Latest Blog Posts</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-dark" id="blogs_text">10 Tips for a Healthy Dog</a></li>
+                            <li><a href="#" class="text-dark" id="blogs_text">Understanding Your Dog's Behavior</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Contact Us</h5>
+                        <p>Email:  <a class="mail" href="pawsitivecare069@gmail.com">pawsitivecare069@gmail.com</a> </p>
+                        <p>Phone: (123) 456-7890</p>
+                        <div>
+                            <a href="https://www.facebook.com/profile.php?id=61565951776773" class="social-icon"><i class="fab fa-facebook"></i></a>
+                            <a href="https://x.com/PawsitiveC069" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/pawsitivecare_069/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.getElementById('youtubeSelect').addEventListener('change', function() {
+                const youtubeIds = {
+                    'zak-george': 'eK7hzrWMFKo',
+                    'kik-puppy': 'DxVHrKxGbXU',
+                    'the-dog-trainer': 'Yvw3N9RIvq8',
+                    'the-honest-vet': 'XY9JbBJRxkY',
+                    'tails-of-the-city': 'QnD3YaAXLQQ',
+                    'the-dodo': 'GF60Iuh643I'
+                };
+                const selectedYoutuber = this.value;
+                const previewDiv = document.getElementById('youtubePreview');
+                if (selectedYoutuber && youtubeIds[selectedYoutuber]) {
+                    previewDiv.innerHTML = <iframe class="youtube-preview" src="https://www.youtube.com/embed/${youtubeIds[selectedYoutuber]}" allowfullscreen></iframe>;
+                } else {
+                    previewDiv.innerHTML = '';
+                }
+            });
+        </script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const profilePic = document.getElementById('profilePic');
+                const profilePopup = document.getElementById('profilePopup');
+                const petInfo = document.getElementById('petInfo');
+            
+                // Fetch pets data from JSON file
+                fetch('pets.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const pet = data.pet; // Access the pet object directly
+            
+                        profilePic.addEventListener('click', function(event) {
+                            event.stopPropagation(); // Prevents event bubbling
+            
+                            // Display pet information
+                            petInfo.innerHTML = `
+                                <p><strong>Pet ID:</strong> ${pet.pet_id}</p>
+                                <p><strong>Name:</strong> ${pet.pet_name}</p>
+                                <p><strong>Age:</strong> ${pet.age}</p>
+                                <p><strong>Breed:</strong> ${pet.breed}</p>
+                                <p><strong>Known Allergies:</strong> ${pet.known_allergies}</p>
+                                <p><strong>Owner Name:</strong> ${pet.owner_name}</p>
+                                <p><strong>Owner Contact:</strong> ${pet.owner_contact}</p>
+                            `;
+                            profilePopup.style.display = 'block';
+                        });
+            
+                        // Close popup when clicking outside
+                        document.addEventListener('click', function(event) {
+                            if (!profilePic.contains(event.target) && !profilePopup.contains(event.target)) {
+                                profilePopup.style.display = 'none';
+                            }
+                        });
+                    })
+                    .catch(error => console.error('Error loading pets data:', error));
+            });
+            
+        </script>
+    </body>
+    </html>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
