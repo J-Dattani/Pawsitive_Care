@@ -30,7 +30,7 @@ Check out the live version of our website: [Dog Care and Wellness](https://verce
 ├── script.js           # JavaScript functionality  
 ├── data.json           # JSON file for dog profiles  
 ├── README.md           # Project documentation
-
+```
 
 
 ## Future Enhancements  
