@@ -31,3 +31,24 @@ Check out the live version of our website: [Dog Care and Wellness](https://verce
 ├── data.json           # JSON file for dog profiles  
 ├── README.md           # Project documentation
 
+## Future Enhancements  
+
+We plan to enhance the project with:  
+- Advanced scheduling features.  
+- User authentication for personalized experiences.  
+- Expanded data visualization for better insights into dog health.  
+
+## Contribution  
+
+Contributions are welcome! Feel free to fork this repository, make changes, and submit a pull request.  
+
+## Acknowledgments  
+
+We would like to thank **webHorizon** for providing an incredible platform to explore, learn, and create.  
+
+---  
+
+## Developed by:  
+- Saumil Doshi  
+- Mihir Mandera  
+- [Your Name]
