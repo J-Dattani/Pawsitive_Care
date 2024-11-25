@@ -1,4 +1,4 @@
-ki# Dog Care and Wellness Website  
+# Dog Care and Wellness Website  
 
 Welcome to our Dog Care and Wellness project repository! This website was developed during **webHorizon**, a two-day coding event where we embraced the challenge of creating a platform dedicated to dog care and wellness.  
 
@@ -21,7 +21,7 @@ Our project aims to provide dog owners with tools and resources to track their p
 - **GitHub**: For sharing the code and handling version control.  
 
 ## Live Demo  
-Check out the live version of our website: [Dog Care and Wellness](https://vercel.io)  
+Check out the live version of our website: [Dog Care and Wellness](https://pawsitive-care.vercel.app/)  
 
 ## Repository Structure  
 ```plaintext
