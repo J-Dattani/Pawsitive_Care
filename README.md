@@ -32,6 +32,20 @@ Check out the live version of our website: [Dog Care and Wellness](https://verce
 ├── README.md           # Project documentation
 ```
 
+## How to Run Locally
+
+1. Clone the repository:
+```bash
+git clone https://github.com/J-Dattani/Pawsitive_Care
+```
+
+2. Navigate to the project directory:
+```bash
+cd dog-care-wellness
+```
+
+3. Open index.html in your browser to view the website locally.
+
 
 ## Future Enhancements  
 
