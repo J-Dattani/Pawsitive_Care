@@ -1,4 +1,4 @@
-# Dog Care and Wellness Website  
+ki# Dog Care and Wellness Website  
 
 Welcome to our Dog Care and Wellness project repository! This website was developed during **webHorizon**, a two-day coding event where we embraced the challenge of creating a platform dedicated to dog care and wellness.  
 
@@ -50,7 +50,8 @@ We would like to thank **webHorizon** for providing an incredible platform to ex
 
 ---  
 
-## Developed by:  
+## Developed by:
+- Jaymin Dattani  
 - Saumil Doshi  
 - Mihir Mandera  
-- [Your Name]
+
