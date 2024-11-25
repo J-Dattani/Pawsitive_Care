@@ -37,14 +37,6 @@ cd dog-care-wellness
 
 3. Open index.html in your browser to view the website locally.
 
-
-## Future Enhancements  
-
-We plan to enhance the project with:  
-- Advanced scheduling features.  
-- User authentication for personalized experiences.  
-- Expanded data visualization for better insights into dog health.  
-
 ## Contribution  
 
 Contributions are welcome! Feel free to fork this repository, make changes, and submit a pull request.  
