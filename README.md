@@ -31,6 +31,8 @@ Check out the live version of our website: [Dog Care and Wellness](https://verce
 ├── data.json           # JSON file for dog profiles  
 ├── README.md           # Project documentation
 
+
+
 ## Future Enhancements  
 
 We plan to enhance the project with:  
