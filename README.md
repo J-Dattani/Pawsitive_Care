@@ -23,15 +23,6 @@ Our project aims to provide dog owners with tools and resources to track their p
 ## Live Demo  
 Check out the live version of our website: [Dog Care and Wellness](https://pawsitive-care.vercel.app/)  
 
-## Repository Structure  
-```plaintext
-├── index.html          # Main HTML file  
-├── styles.css          # CSS for styling the website  
-├── script.js           # JavaScript functionality  
-├── data.json           # JSON file for dog profiles  
-├── README.md           # Project documentation
-```
-
 ## How to Run Locally
 
 1. Clone the repository:
